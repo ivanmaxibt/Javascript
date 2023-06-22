@@ -33,12 +33,25 @@ const accesorios = [
 ];
 
 const number = parseInt(prompt("Por favor ingrese un número: "));
-const  cantidad= parseInt(prompt("Por favor ingrese una cantidad: "));
+const cantidad= parseInt(prompt("Por favor ingrese una cantidad: "));
 for (let i = 0; i < accesorios.length; i++) {
     if (accesorios[i].order === number) {
         const total = (accesorios[i].price)*cantidad;
         alert(`El total es: ${total}`);
     }
+}
+function aplicarDescuento(total, porcentajeDescuento) {
+    var porcentajeDescuento = 0.15
+    var precioConDescuento = total - (total * porcentajeDescuento);
+    return precioConDescuento;
+  }
+const pago = parseInt(prompt("Paga en efectivo (S/N): "));
+function siONo(pago) {
+  if (pago === "S") {
+    return alert(`El total es: ${precioConDescuento}`);
+  } else {
+    return alert(`El total es: ${total}`);
+  }
 }
 
 alert("Muchas gracias por su compra. Vuelva Pronto.");
