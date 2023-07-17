@@ -15,17 +15,28 @@
 <body>
     <header class="container">
         <img id="ir_arriba" class="logo" src="" alt="">
-                <div class="dropdown">
-                    <button class="mn"><ion-icon name="menu"></ion-icon></button>
-                    <div class="dropdown-content">
-                        <a href="" class="ref"></a>
-                        <a href="" class="ref"></a>
-                        <a href="" class="ref"></a>
-                        <a href="" class="ref"></a>
-                    </div>
-                </div>
+        <form id="form">
+            <label for="nombre"><h3>Hola, es un placer recibirlo aquí en Resina en la Web. Por favor: Ingrese su nombre</h3></label>
+            <input type="text" id="nombre" name="nombre">
+            <button type="submit">Enviar</button>
+          </form>
+    
+          <p id="saludo"></p>
+          <script>
+            let form = document.getElementById('form');
+            form.addEventListener('submit', (event) => {
+              event.preventDefault();
+              let nombre = document.getElementById('nombre').value;
+              localStorage.setItem('nombre', nombre);
+              let nombreGuardado = localStorage.getItem('nombre');
+              let saludo = document.getElementById('saludo');
+              saludo.textContent = `Bienvenido: ${nombreGuardado}. Espero que se encuentre muy bien. A continuación podrá consultar el catálogo:`;
+            });
+          </script>
     </header>
+    <main>
     <div class="container">
+        <script src="./js/simulador.js"></script>
         <h1>Nuestros Productos</h1>
         <hr class="hr2">
         <div class="slide">
@@ -33,27 +44,27 @@
                 <input class="slide-open" type="radio" id="slide-1" 
                       name="slide" aria-hidden="true" hidden="" checked="checked">
                 <div class="slide-item">
-                    <img src="" alt="">
+                    <img src="./images/lapiceras.jpg" alt="">
                 </div>
                 <input class="slide-open" type="radio" id="slide-2" 
                       name="slide" aria-hidden="true" hidden="">
                 <div class="slide-item">
-                    <img src="" alt="">
+                    <img src="./images/aros.jpg" alt="">
                 </div>
                 <input class="slide-open" type="radio" id="slide-3" 
                       name="slide" aria-hidden="true" hidden="">
                 <div class="slide-item">
-                    <img src="" alt="">
+                    <img src="./images/señalador.jpg" alt="">
                 </div>
                 <input class="slide-open" type="radio" id="slide-4" 
                       name="slide" aria-hidden="true" hidden="">
                 <div class="slide-item">
-                    <img src="" alt="">
+                    <img src="./images/varios.jpg" alt="">
                 </div>
                 <input class="slide-open" type="radio" id="slide-5" 
                       name="slide" aria-hidden="true" hidden="">
                 <div class="slide-item">
-                    <img src="" alt="">
+                    <img src="./images/llavero.jpg" alt="">
                 </div>
                 <label for="slide-5" class="slide-control prev control-1">‹</label>
                 <label for="slide-2" class="slide-control next control-1">›</label>
@@ -89,7 +100,7 @@
             <a href="#ir_arriba"><ion-icon name="logo-vue" class="vue"></ion-icon></a>
         </div>
     </div>
-</main>
+    </main>
 <footer class="container">
     <div class="derechos">
         Seguinos en nuestras redes:
@@ -112,6 +123,5 @@
 </footer>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="./js/simulador.js"></script>
 </body>
 </html>

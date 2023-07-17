@@ -19,7 +19,7 @@ h3{
     font-family: 'Play', serif;
     font-weight: 400;
     font-size: 48;
-    text-align: left;
+    text-align: center;
     text-decoration: underline;
 }
 .derechos{
@@ -31,11 +31,11 @@ h3{
     text-align: center;
 }
 p{
-    color:rgb(207, 43, 78);
+    color:rgb(244, 227, 7);
     font-family:'DM Sans', serif;
     font-weight: 400;
     font-size: 48;
-    text-align: justify;
+    text-align: center;
     line-height: 1.5;
 }
 ul li{
