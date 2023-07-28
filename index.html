@@ -1,4 +1,5 @@
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,33 +7,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <title>Resina en la Web</title>
     <meta name="description" content="Somos profesionales de la salud y voluntari@s, ayudando a comunidades vulnerables">
     <meta name="keywords" content="RESINA, CREATIVIDAD, COMPROMISO CON EL CLIENTE, PUNTUALIDAD, SERIEDAD, TRABAJOS A MEDIDA, PEDIDOS">
-    <link rel="shortcut icon" href="../images/favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header class="container">
-        <img id="ir_arriba" class="logo" src="" alt="">
-        <form id="form">
-            <label for="nombre"><h3>Hola, es un placer recibirlo aquí en Resina en la Web. Por favor: Ingrese su nombre</h3></label>
-            <input type="text" id="nombre" name="nombre">
-            <button type="submit">Enviar</button>
-          </form>
-    
-          <p id="saludo"></p>
-          <script>
-            let form = document.getElementById('form');
-            form.addEventListener('submit', (event) => {
-              event.preventDefault();
-              let nombre = document.getElementById('nombre').value;
-              localStorage.setItem('nombre', nombre);
-              let nombreGuardado = localStorage.getItem('nombre');
-              let saludo = document.getElementById('saludo');
-              saludo.textContent = `Bienvenido: ${nombreGuardado}. Espero que se encuentre muy bien. A continuación podrá consultar el catálogo:`;
-            });
-          </script>
+            <img id="ir_arriba" class="logo" src="./images/REW.png" alt="Resina en la Web">
+	        <p id="fecha"></p>
+	        <script src="./js/fecha.js"></script>
+            <form id="form">
+                <label for="nombre"><h3>Hola, es un placer recibirlo aquí en Resina en la Web. Por favor: Ingrese su nombre</h3></label>
+                <input type="text" id="nombre" name="nombre">
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="saludo"></p>
+            <script src="./js/saludo.js"></script>
     </header>
     <main>
     <div class="container">
