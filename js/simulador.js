@@ -42,10 +42,15 @@ button.addEventListener('click', () => {
         const cantidad = parseInt(cantidadInput.value);
         costoTotal += accesorios[index].price * cantidad;
     });
+    
+    const now = new Date();
+    const dayOfWeek = now.getDay();
+    if (dayOfWeek === 2) {
+        costoTotal *= 0.8;
+    }
 
     alert(`Costo total: $${costoTotal}`);
 });
-
 
 document.body.appendChild(container);
 document.body.appendChild(button);
