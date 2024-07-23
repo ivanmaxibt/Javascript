@@ -49,7 +49,7 @@ button.addEventListener('click', () => {
         costoTotal *= 0.8;
     }
 
-    alert(`Costo total: $${costoTotal}`);
+   console.log(`Costo total: $${costoTotal}`);
 });
 
 document.body.appendChild(container);
